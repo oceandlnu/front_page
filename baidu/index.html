@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="view" content="width=device-width,initial-scale=1">
+    <title>百度一下，你就知道</title>
+    <style type="text/css">
+        .div1 {
+            position: fixed;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        .div2 {
+            position: fixed;
+            top: 12%;
+            /*border: 1px solid red;*/
+            text-align: center;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        .div3 {
+            /*border: 1px solid red;*/
+            text-align:center;
+            position: fixed;
+            top: 70%;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        .div4 {
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 85%;
+            padding: 0;
+            margin: 0;
+        }
+        . div5 {
+            /*display: inline;*/
+            text-align: center;
+            width: 50px;
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            color: #333333;
+        }
+        a.a1 {
+            text-decoration: none;
+            color: white;
+            background-color: #3388FF;
+            padding: 0.5em;
+        }
+        a.a3:hover {
+            color: blue;
+        }
+        .ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            float: right;
+        }
+        .ul li {
+            float: left;
+            font-size: 0.5em;
+            padding: 0 0.5em;
+        }
+        .ul1 {
+            /*border: 1px solid red;*/
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .ul1 li {
+            font-size: 0.5em;
+            padding: 0 0.5em;
+            display: inline;
+        }
+        .form {
+            margin-top: 30px;
+            /*border: 1px solid red;*/
+        }
+        .text {
+            vertical-align: bottom;
+            height: 32px;
+            width: 500px;
+            padding: 0;
+        }
+        .submit {
+            vertical-align: bottom;
+            height: 36px;
+            width: 100px;
+            background-color: #317ef3;
+            color: white;
+            border: 0;
+            padding: 0;
+        }
+        .hide {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+        #ul {
+        }
+        #ul span a{
+            text-decoration: none;
+        }
+        #ul span a:hover{
+            background-color: #3388FF;
+            color: white;
+        }
+
+        #bot_box{
+            /*position: fixed;*/
+            /*left: 34%;*/
+            width:100%;
+            border: 1px solid #4C9ED9;
+            border: none;
+            display: none;
+        }
+
+        #bot_box ul li{
+            list-style: none;
+            line-height: 25px;
+            padding-left: 10px;
+        }
+        #bot_box ul li:hover{
+            background: #BCBCBC;
+        }
+        .s_btn {
+            /*position:relative;*/
+            left:300px;
+            top:-31px;
+            width: 100px;
+            height: 36px;
+            color: #fff;
+            font-size: 15px;
+            letter-spacing: 1px;
+            background: #3385ff;
+            border-bottom: 1px solid #2d78f4;
+            outline: medium;
+        }
+
+        .sel{
+            background:#BCBCBC;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="div1">
+    <ul class="ul">
+        <li><a class="a3" href="#"><b>新闻</b></a></li>
+        <li><a class="a3" href="#"><b>hao123</b></a></li>
+        <li><a class="a3" href="#"><b>地图</b></a></li>
+        <li><a class="a3" href="#"><b>视频</b></a></li>
+        <li><a class="a3" href="#"><b>贴吧</b></a></li>
+        <li><a class="a3" href="#"><b>学术</b></a></li>
+        <li><a class="a3" href="#">登录</a></li>
+        <li>
+            <div class="div5" id="ul" onmouseover="show()" onmouseout="hide()">
+                <span style="text-decoration: underline">设置</span>
+                <span class="hide"><a href="">搜索设置</a></span>
+                <span class="hide"><a href="">高级搜索</a></span>
+                <span class="hide"><a href="">关闭预测</a></span>
+                <span class="hide"><a href="">搜索历史</a></span>
+            </div>
+        </li>
+        <li><a class="a1" href="#">更多产品</a></li>
+    </ul>
+</div>
+
+<div class="div2">
+    <img src="image/bd_logo1.png" height="129" width="270"/>
+    <div>
+        <div id="ser_box">
+            <form class="form" action="#" method="POST">
+                <input id="ipt" class="text" type="search" name=""><input class="submit" type="submit" value="百度一下">
+            </form>
+        </div>
+        <div id="bot_box">
+            <ul id="oul"></ul>
+        </div>
+    </div>
+</div>
+
+<div class="div3">
+    <img style="margin: 0;padding: 0" src="image/2weima.jpg" height="50" width="50"/>
+    <p style="font-size: 0.5em;margin: 0;padding: 0"><b>手机百度</b></p>
+</div>
+
+<div class="div4">
+    <ul class="ul1">
+        <li><a href="#">把百度设为主页</a></li>
+        <li><a href="#">关于百度</a></li>
+        <li><a href="#">About  Baidu</a></li>
+        <li><a href="#">百度推广</a></li>
+    </ul>
+    <br />
+
+    <ul class="ul1">
+        <li>©2017 Baidu</li>
+        <li><a href="#">使用百度前必读</a></li>
+        <li><a href="#">意见反馈</a></li>
+        <li>京ICP证030173号</li>
+        <li><a href="#">京公网安备11000002000001号</a></li>
+    </ul>
+</div>
+<script type="text/javascript">
+    function show() {
+        var oUl = document.getElementById("ul");
+        var oLi = oUl.getElementsByTagName("span");
+        for(var i=1;i<oLi.length;i++) {
+            oLi[i].className = "show";
+        }
+    }
+    function hide() {
+        var oUl = document.getElementById("ul");
+        var oLi = oUl.getElementsByTagName("span");
+        for(var i=1;i<oLi.length;i++) {
+            oLi[i].className = "hide";
+        }
+    }
+</script>
+<script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

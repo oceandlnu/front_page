@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片分割</title>
+    <style>
+        #container {
+            width: 1024px;
+            height: 1024px;
+            /*background-color: aqua;*/
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        #mainUL {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul id="mainUL"></ul>
+</div>
+
+<script>
+    var div = document.getElementById("container");
+    var ul = document.getElementById("mainUL");
+    var rowNum = 5;
+    var lineNum = 5;
+    var rowLength = div.clientWidth / rowNum;
+    var lineLength = div.clientHeight / lineNum;
+    function getRandomColor() {
+        var r = parseInt(Math.random() * 256);
+        var g = parseInt(Math.random() * 256);
+        var b = parseInt(Math.random() * 256);
+        return "rgb(" + r + "," + g + "," + b + ")";
+    }
+    for (var i = 0; i < rowNum * lineNum; i++) {
+        var li = document.createElement("li");
+        li.style.backgroundColor = getRandomColor();
+        li.style.width = rowLength + "px";
+        li.style.height = lineLength + "px";
+        ul.appendChild(li);
+        li.style.float = "left";
+    }
+
+    var liArr = document.getElementsByTagName("li");
+    for (var i = 0; i < rowNum * lineNum; i++) {
+        liArr[i].style.background = "url('1.jpg')";
+        liArr[i].style.backgroundPositionX = i*(-rowLength) + "px";
+        liArr[i].style.backgroundPositionY = parseInt(i/rowNum)*(-lineLength) + "px";
+//        liArr[i].style.transform = "rotateZ(30deg)";
+    }
+    var radius=0;
+    var timer = setInterval(function () {
+
+        var liArr = document.getElementsByTagName("li");
+        for(i=0;i<liArr.length;i++) {
+            liArr[i].style.borderRadius = radius+"px";
+        }
+        radius+=10;
+        if(radius > rowLength/2) {
+            radius = 0;
+        }
+    },50);
+</script>
+</body>
+</html>
